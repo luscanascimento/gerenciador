@@ -33,8 +33,10 @@ Este projeto é um sistema de gerenciamento de vendas desenvolvido em C# utiliza
    git clone https://github.com/luscanascimento/gerenciador.git
 
 2. Configure a string de conexão no arquivo Database/Database.cs:
-    # Abra o arquivo Database/Database.cs e configure a string de conexão
-    private string connectionString = "Host=localhost;Username=seu_usuario;Password=sua_senha;Database=gerenciador";
+   Abra o arquivo Database/Database.cs e configure a string de conexão
+    ```bash
+    private string connectionString = "Host=localhost;
+    Username=seu_usuario;Password=sua_senha;Database=gerenciador";
 
 3. Abra o projeto no Visual Studio e restaure os pacotes NuGet:
    ```bash 
