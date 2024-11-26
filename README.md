@@ -7,7 +7,7 @@ Este projeto é um sistema de gerenciamento de vendas desenvolvido em C# utiliza
 - .NET 6.0
 - C#
 - Windows Forms
-- PostgreSQL
+- PostgreSQL 17
 - Npgsql
 - Git
 - ReportViewer
@@ -30,11 +30,11 @@ Este projeto é um sistema de gerenciamento de vendas desenvolvido em C# utiliza
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu_usuario/gerenciador.git
+   git clone https://github.com/luscanascimento/gerenciador.git
 
 2. Configure a string de conexão no arquivo Database/Database.cs:
-                  ```bash
-   private string connectionString = "Host=localhost;Username=seu_usuario;Password=sua_senha;Database=gerenciador";
+    # Abra o arquivo Database/Database.cs e configure a string de conexão
+    private string connectionString = "Host=localhost;Username=seu_usuario;Password=sua_senha;Database=gerenciador";
 
 3. Abra o projeto no Visual Studio e restaure os pacotes NuGet:
    ```bash 
