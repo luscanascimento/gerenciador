@@ -54,4 +54,4 @@ Este projeto é um sistema de gerenciamento de vendas desenvolvido em C# utiliza
 - Relatórios: Geração de relatórios de vendas utilizando o ReportViewer.
 
 # Script SQL para Configuração Inicial
-- Encontra-se no arquivo .sql
+- Encontra-se no arquivo script.sql
