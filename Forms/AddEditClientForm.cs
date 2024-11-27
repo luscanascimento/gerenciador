@@ -19,6 +19,7 @@ namespace gerenciador.Forms
                 textBoxName.Text = client.Name;
                 textBoxEmail.Text = client.Email;
                 textBoxTel.Text = client.Tel;
+                textBoxAddress.Text = client.Address; // Adicionado
             }
         }
 
@@ -26,11 +27,11 @@ namespace gerenciador.Forms
         {
             if (client == null)
             {
-                database.CreateClient(textBoxName.Text, textBoxEmail.Text, textBoxTel.Text);
+                database.CreateClient(textBoxName.Text, textBoxEmail.Text, textBoxTel.Text, textBoxAddress.Text); // Adicionado
             }
             else
             {
-                database.UpdateClient(client.Id, textBoxName.Text, textBoxEmail.Text, textBoxTel.Text);
+                database.UpdateClient(client.Id, textBoxName.Text, textBoxEmail.Text, textBoxTel.Text, textBoxAddress.Text); // Adicionado
             }
 
             this.DialogResult = DialogResult.OK;

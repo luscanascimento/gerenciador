@@ -9,32 +9,34 @@ namespace gerenciador
     {
         private string connectionString = "Host=localhost;Username=postgres;Password=1103;Database=gerenciador";
 
-        public void CreateClient(string name, string email, string tel)
+        public void CreateClient(string name, string email, string tel, string address)
         {
             using (var conn = new NpgsqlConnection(connectionString))
             {
                 conn.Open();
-                using (var cmd = new NpgsqlCommand("INSERT INTO clients (name, email, tel) VALUES (@name, @email, @tel)", conn))
+                using (var cmd = new NpgsqlCommand("INSERT INTO clients (name, email, tel, address) VALUES (@name, @email, @tel, @address)", conn))
                 {
                     cmd.Parameters.AddWithValue("name", name);
                     cmd.Parameters.AddWithValue("email", email);
                     cmd.Parameters.AddWithValue("tel", tel);
+                    cmd.Parameters.AddWithValue("address", address);
                     cmd.ExecuteNonQuery();
                 }
             }
         }
 
-        public void UpdateClient(int clientId, string name, string email, string tel)
+        public void UpdateClient(int clientId, string name, string email, string tel, string address)
         {
             using (var conn = new NpgsqlConnection(connectionString))
             {
                 conn.Open();
-                using (var cmd = new NpgsqlCommand("UPDATE clients SET name = @name, email = @email, tel = @tel WHERE id = @clientId", conn))
+                using (var cmd = new NpgsqlCommand("UPDATE clients SET name = @name, email = @email, tel = @tel, address = @address WHERE id = @clientId", conn))
                 {
                     cmd.Parameters.AddWithValue("clientId", clientId);
                     cmd.Parameters.AddWithValue("name", name);
                     cmd.Parameters.AddWithValue("email", email);
                     cmd.Parameters.AddWithValue("tel", tel);
+                    cmd.Parameters.AddWithValue("address", address);
                     cmd.ExecuteNonQuery();
                 }
             }
@@ -59,7 +61,7 @@ namespace gerenciador
             using (var conn = new NpgsqlConnection(connectionString))
             {
                 conn.Open();
-                using (var cmd = new NpgsqlCommand("SELECT id, name, email, tel FROM clients WHERE IsDeleted = FALSE", conn))
+                using (var cmd = new NpgsqlCommand("SELECT id, name, email, tel, address FROM clients WHERE IsDeleted = FALSE", conn))
                 {
                     using (var reader = cmd.ExecuteReader())
                     {
@@ -70,7 +72,8 @@ namespace gerenciador
                                 Id = reader.GetInt32(0),
                                 Name = reader.GetString(1),
                                 Email = reader.GetString(2),
-                                Tel = reader.GetString(3)
+                                Tel = reader.GetString(3),
+                                Address = reader.GetString(4) // Adicionado
                             });
                         }
                     }
@@ -201,7 +204,8 @@ namespace gerenciador
             }
             return sales;
         }
-        public List<SaleReport> GetSalesReport(int? clientId = null, int? productId = null)
+
+        public List<SaleReport> GetSalesReport(int? productId = null)
         {
             var sales = new List<SaleReport>();
             using (var conn = new NpgsqlConnection(connectionString))
@@ -213,11 +217,9 @@ namespace gerenciador
                             "JOIN sales_items si ON s.id = si.sale_id " +
                             "JOIN products p ON si.product_id = p.id " +
                             "WHERE s.IsDeleted = FALSE AND si.IsDeleted = FALSE " +
-                            "AND (@clientId IS NULL OR s.client_id = @clientId) " +
                             "AND (@productId IS NULL OR si.product_id = @productId)";
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("clientId", clientId.HasValue ? (object)clientId.Value : DBNull.Value);
                     cmd.Parameters.AddWithValue("productId", productId.HasValue ? (object)productId.Value : DBNull.Value);
                     using (var reader = cmd.ExecuteReader())
                     {

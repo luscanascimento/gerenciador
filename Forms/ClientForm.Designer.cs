@@ -1,12 +1,14 @@
+using System.Windows.Forms;
+
 namespace gerenciador.Forms
 {
     partial class ClientForm
     {
         private System.ComponentModel.IContainer components = null;
         private DataGridView dataGridViewClients;
-        private Button buttonAdd;
-        private Button buttonEdit;
-        private Button buttonDelete;
+        private Button buttonAddClient;
+        private Button buttonEditClient;
+        private Button buttonDeleteClient;
 
         protected override void Dispose(bool disposing)
         {
@@ -20,9 +22,9 @@ namespace gerenciador.Forms
         private void InitializeComponent()
         {
             this.dataGridViewClients = new DataGridView();
-            this.buttonAdd = new Button();
-            this.buttonEdit = new Button();
-            this.buttonDelete = new Button();
+            this.buttonAddClient = new Button();
+            this.buttonEditClient = new Button();
+            this.buttonDeleteClient = new Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClients)).BeginInit();
             this.SuspendLayout();
             // 
@@ -34,44 +36,44 @@ namespace gerenciador.Forms
             this.dataGridViewClients.Size = new System.Drawing.Size(760, 400);
             this.dataGridViewClients.TabIndex = 0;
             // 
-            // buttonAdd
+            // buttonAddClient
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(12, 418);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
-            this.buttonAdd.TabIndex = 1;
-            this.buttonAdd.Text = "Adicionar";
-            this.buttonAdd.UseVisualStyleBackColor = true;
-            this.buttonAdd.Click += new System.EventHandler(this.ButtonAdd_Click);
+            this.buttonAddClient.Location = new System.Drawing.Point(12, 418);
+            this.buttonAddClient.Name = "buttonAddClient";
+            this.buttonAddClient.Size = new System.Drawing.Size(75, 23);
+            this.buttonAddClient.TabIndex = 1;
+            this.buttonAddClient.Text = "Adicionar";
+            this.buttonAddClient.UseVisualStyleBackColor = true;
+            this.buttonAddClient.Click += new System.EventHandler(this.ButtonAddClient_Click);
             // 
-            // buttonEdit
+            // buttonEditClient
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(93, 418);
-            this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(75, 23);
-            this.buttonEdit.TabIndex = 2;
-            this.buttonEdit.Text = "Editar";
-            this.buttonEdit.UseVisualStyleBackColor = true;
-            this.buttonEdit.Click += new System.EventHandler(this.ButtonEdit_Click);
+            this.buttonEditClient.Location = new System.Drawing.Point(93, 418);
+            this.buttonEditClient.Name = "buttonEditClient";
+            this.buttonEditClient.Size = new System.Drawing.Size(75, 23);
+            this.buttonEditClient.TabIndex = 2;
+            this.buttonEditClient.Text = "Editar";
+            this.buttonEditClient.UseVisualStyleBackColor = true;
+            this.buttonEditClient.Click += new System.EventHandler(this.ButtonEditClient_Click);
             // 
-            // buttonDelete
+            // buttonDeleteClient
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(174, 418);
-            this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(75, 23);
-            this.buttonDelete.TabIndex = 3;
-            this.buttonDelete.Text = "Deletar";
-            this.buttonDelete.UseVisualStyleBackColor = true;
-            this.buttonDelete.Click += new System.EventHandler(this.ButtonDelete_Click);
+            this.buttonDeleteClient.Location = new System.Drawing.Point(174, 418);
+            this.buttonDeleteClient.Name = "buttonDeleteClient";
+            this.buttonDeleteClient.Size = new System.Drawing.Size(75, 23);
+            this.buttonDeleteClient.TabIndex = 3;
+            this.buttonDeleteClient.Text = "Excluir";
+            this.buttonDeleteClient.UseVisualStyleBackColor = true;
+            this.buttonDeleteClient.Click += new System.EventHandler(this.ButtonDeleteClient_Click);
             // 
             // ClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
-            this.Controls.Add(this.buttonDelete);
-            this.Controls.Add(this.buttonEdit);
-            this.Controls.Add(this.buttonAdd);
+            this.Controls.Add(this.buttonDeleteClient);
+            this.Controls.Add(this.buttonEditClient);
+            this.Controls.Add(this.buttonAddClient);
             this.Controls.Add(this.dataGridViewClients);
             this.Name = "ClientForm";
             this.Text = "Gerenciar Clientes";

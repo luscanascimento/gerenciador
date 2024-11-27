@@ -14,16 +14,11 @@ namespace gerenciador.Forms
         {
             InitializeComponent();
             database = new Database();
-            LoadClientsAndProducts();
+            LoadProducts();
         }
 
-        private void LoadClientsAndProducts()
+        private void LoadProducts()
         {
-            var clients = database.GetClients();
-            comboBoxClient.DataSource = clients;
-            comboBoxClient.DisplayMember = "Name";
-            comboBoxClient.ValueMember = "Id";
-
             var products = database.GetProducts();
             comboBoxProduct.DataSource = products;
             comboBoxProduct.DisplayMember = "Name";
@@ -39,18 +34,16 @@ namespace gerenciador.Forms
         {
             LoadReport();
         }
+private void LoadReport()
+{
+    int? productId = comboBoxProduct.SelectedValue as int?;
 
-        private void LoadReport()
-        {
-            int? clientId = comboBoxClient.SelectedValue as int?;
-            int? productId = comboBoxProduct.SelectedValue as int?;
-
-            List<SaleReport> sales = database.GetSalesReport(clientId, productId);
-            ReportDataSource rds = new ReportDataSource("SalesDataSet", sales);
-            this.reportViewer1.LocalReport.DataSources.Clear();
-            this.reportViewer1.LocalReport.DataSources.Add(rds);
-            this.reportViewer1.LocalReport.ReportPath = "SalesReport.rdlc";
-            this.reportViewer1.RefreshReport();
-        }
+    List<SaleReport> sales = database.GetSalesReport(productId);
+    ReportDataSource rds = new ReportDataSource("SalesDataSet", sales);
+    this.reportViewer1.LocalReport.DataSources.Clear();
+    this.reportViewer1.LocalReport.DataSources.Add(rds);
+    this.reportViewer1.LocalReport.ReportPath = "Reports/SalesReport.rdlc";
+    this.reportViewer1.RefreshReport();
+}
     }
 }

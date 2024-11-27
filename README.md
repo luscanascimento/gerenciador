@@ -4,7 +4,7 @@ Este projeto é um sistema de gerenciamento de vendas desenvolvido em C# utiliza
 
 ## Requisitos
 
-- .NET 6.0
+- .NET Framework 4.6
 - C#
 - Windows Forms
 - PostgreSQL 17

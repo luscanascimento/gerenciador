@@ -25,7 +25,7 @@ namespace gerenciador.Forms
             dataGridViewClients.DataSource = clients;
         }
 
-        private void ButtonAdd_Click(object sender, EventArgs e)
+        private void ButtonAddClient_Click(object sender, EventArgs e)
         {
             var addEditClientForm = new AddEditClientForm();
             if (addEditClientForm.ShowDialog() == DialogResult.OK)
@@ -34,7 +34,7 @@ namespace gerenciador.Forms
             }
         }
 
-        private void ButtonEdit_Click(object sender, EventArgs e)
+        private void ButtonEditClient_Click(object sender, EventArgs e)
         {
             if (dataGridViewClients.SelectedRows.Count > 0)
             {
@@ -51,7 +51,7 @@ namespace gerenciador.Forms
             }
         }
 
-        private void ButtonDelete_Click(object sender, EventArgs e)
+        private void ButtonDeleteClient_Click(object sender, EventArgs e)
         {
             if (dataGridViewClients.SelectedRows.Count > 0)
             {

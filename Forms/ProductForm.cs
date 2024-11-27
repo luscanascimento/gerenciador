@@ -25,7 +25,7 @@ namespace gerenciador.Forms
             dataGridViewProducts.DataSource = products;
         }
 
-        private void ButtonAdd_Click(object sender, EventArgs e)
+        private void ButtonAddProduct_Click(object sender, EventArgs e)
         {
             var addEditProductForm = new AddEditProductForm();
             if (addEditProductForm.ShowDialog() == DialogResult.OK)
@@ -34,7 +34,7 @@ namespace gerenciador.Forms
             }
         }
 
-        private void ButtonEdit_Click(object sender, EventArgs e)
+        private void ButtonEditProduct_Click(object sender, EventArgs e)
         {
             if (dataGridViewProducts.SelectedRows.Count > 0)
             {
@@ -51,7 +51,7 @@ namespace gerenciador.Forms
             }
         }
 
-        private void ButtonDelete_Click(object sender, EventArgs e)
+        private void ButtonDeleteProduct_Click(object sender, EventArgs e)
         {
             if (dataGridViewProducts.SelectedRows.Count > 0)
             {

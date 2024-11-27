@@ -26,15 +26,24 @@ namespace gerenciador.Forms
         {
             if (product == null)
             {
-                database.CreateProduct(textBoxName.Text, decimal.Parse(textBoxPrice.Text), decimal.Parse(textBoxUN.Text));
+                product = new Product();
+            }
+
+            product.Name = textBoxName.Text;
+            product.Price = decimal.Parse(textBoxPrice.Text);
+            product.UN = decimal.Parse(textBoxUN.Text);
+
+            if (product.Id == 0)
+            {
+                database.CreateProduct(product.Name, product.Price, product.UN);
             }
             else
             {
-                database.UpdateProduct(product.Id, textBoxName.Text, decimal.Parse(textBoxPrice.Text), decimal.Parse(textBoxUN.Text));
+                database.UpdateProduct(product.Id, product.Name, product.Price, product.UN);
             }
 
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            DialogResult = DialogResult.OK;
+            Close();
         }
     }
 }

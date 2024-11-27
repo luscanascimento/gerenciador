@@ -1,13 +1,16 @@
---PostgreSQL 17-- 
-CREATE DATABASE gerenciador;
+-- Deletar tabelas com CASCADE
+DROP TABLE IF EXISTS sales_items CASCADE;
+DROP TABLE IF EXISTS sales CASCADE;
+DROP TABLE IF EXISTS products CASCADE;
+DROP TABLE IF EXISTS clients CASCADE;
 
-\c gerenciador;
-
+-- Recriar as tabelas
 CREATE TABLE clients (
     id SERIAL PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     email VARCHAR(100),
     tel VARCHAR(20),
+    address VARCHAR(200), -- Adicionado
     IsDeleted BOOLEAN DEFAULT FALSE
 );
 
@@ -42,15 +45,13 @@ CREATE INDEX idx_client_name ON clients(name);
 CREATE INDEX idx_product_name ON products(name);
 CREATE INDEX idx_sale_client_id ON sales(client_id);
 
-
-
---Opcional daqui em diante, só fiz para agilizar a visualiação e o teste de algumas funcionalidades
+-- Opcional daqui em diante, só fiz para agilizar a visualização e o teste de algumas funcionalidades
 
 -- Inserir clientes
-INSERT INTO clients (name, email, tel) VALUES
-('Cliente 1', 'cliente1@example.com', '123456789'),
-('Cliente 2', 'cliente2@example.com', '987654321'),
-('Cliente 3', 'cliente3@example.com', '555555555');
+INSERT INTO clients (name, email, tel, address) VALUES
+('Cliente 1', 'cliente1@example.com', '123456789', 'Endereço 1'),
+('Cliente 2', 'cliente2@example.com', '987654321', 'Endereço 2'),
+('Cliente 3', 'cliente3@example.com', '555555555', 'Endereço 3');
 
 -- Inserir produtos
 INSERT INTO products (name, price, un) VALUES

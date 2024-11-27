@@ -1,3 +1,5 @@
+using System.Windows.Forms;
+
 namespace gerenciador.Forms
 {
     partial class AddEditProductForm
@@ -31,6 +33,37 @@ namespace gerenciador.Forms
             this.labelUN = new Label();
             this.SuspendLayout();
             // 
+            // textBoxName
+            // 
+            this.textBoxName.Location = new System.Drawing.Point(12, 25);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(200, 20);
+            this.textBoxName.TabIndex = 0;
+            // 
+            // textBoxPrice
+            // 
+            this.textBoxPrice.Location = new System.Drawing.Point(12, 65);
+            this.textBoxPrice.Name = "textBoxPrice";
+            this.textBoxPrice.Size = new System.Drawing.Size(200, 20);
+            this.textBoxPrice.TabIndex = 1;
+            // 
+            // textBoxUN
+            // 
+            this.textBoxUN.Location = new System.Drawing.Point(12, 105);
+            this.textBoxUN.Name = "textBoxUN";
+            this.textBoxUN.Size = new System.Drawing.Size(200, 20);
+            this.textBoxUN.TabIndex = 2;
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Location = new System.Drawing.Point(12, 145);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(75, 23);
+            this.buttonSave.TabIndex = 3;
+            this.buttonSave.Text = "Salvar";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.ButtonSave_Click);
+            // 
             // labelName
             // 
             this.labelName.AutoSize = true;
@@ -40,72 +73,40 @@ namespace gerenciador.Forms
             this.labelName.TabIndex = 4;
             this.labelName.Text = "Nome";
             // 
-            // textBoxName
-            // 
-            this.textBoxName.Location = new System.Drawing.Point(12, 25);
-            this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(260, 20);
-            this.textBoxName.TabIndex = 0;
-            // 
             // labelPrice
             // 
             this.labelPrice.AutoSize = true;
-            this.labelPrice.Location = new System.Drawing.Point(12, 48);
+            this.labelPrice.Location = new System.Drawing.Point(12, 49);
             this.labelPrice.Name = "labelPrice";
             this.labelPrice.Size = new System.Drawing.Size(35, 13);
             this.labelPrice.TabIndex = 5;
             this.labelPrice.Text = "Preço";
             // 
-            // textBoxPrice
-            // 
-            this.textBoxPrice.Location = new System.Drawing.Point(12, 64);
-            this.textBoxPrice.Name = "textBoxPrice";
-            this.textBoxPrice.Size = new System.Drawing.Size(260, 20);
-            this.textBoxPrice.TabIndex = 1;
-            // 
             // labelUN
             // 
             this.labelUN.AutoSize = true;
-            this.labelUN.Location = new System.Drawing.Point(12, 87);
+            this.labelUN.Location = new System.Drawing.Point(12, 89);
             this.labelUN.Name = "labelUN";
-            this.labelUN.Size = new System.Drawing.Size(26, 13);
+            this.labelUN.Size = new System.Drawing.Size(62, 13);
             this.labelUN.TabIndex = 6;
-            this.labelUN.Text = "UN";
-            // 
-            // textBoxUN
-            // 
-            this.textBoxUN.Location = new System.Drawing.Point(12, 103);
-            this.textBoxUN.Name = "textBoxUN";
-            this.textBoxUN.Size = new System.Drawing.Size(260, 20);
-            this.textBoxUN.TabIndex = 2;
-            // 
-            // buttonSave
-            // 
-            this.buttonSave.Location = new System.Drawing.Point(197, 129);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(75, 23);
-            this.buttonSave.TabIndex = 3;
-            this.buttonSave.Text = "Salvar";
-            this.buttonSave.UseVisualStyleBackColor = true;
-            this.buttonSave.Click += new System.EventHandler(this.ButtonSave_Click);
+            this.labelUN.Text = "Quantidade";
             // 
             // AddEditProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 164);
+            this.ClientSize = new System.Drawing.Size(284, 181);
+            this.Controls.Add(this.labelUN);
+            this.Controls.Add(this.labelPrice);
+            this.Controls.Add(this.labelName);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.textBoxUN);
-            this.Controls.Add(this.labelUN);
             this.Controls.Add(this.textBoxPrice);
-            this.Controls.Add(this.labelPrice);
             this.Controls.Add(this.textBoxName);
-            this.Controls.Add(this.labelName);
             this.Name = "AddEditProductForm";
             this.Text = "Adicionar/Editar Produto";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
     }
 }

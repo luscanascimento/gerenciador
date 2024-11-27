@@ -67,3 +67,4 @@ C:\Users\Sirbu\OneDrive\Documentos\projects\gerenciador\gerenciador\obj\Debug\ne
 C:\Users\Sirbu\OneDrive\Documentos\projects\gerenciador\gerenciador\obj\Debug\net6.0-windows\gerenciador.pdb
 C:\Users\Sirbu\OneDrive\Documentos\projects\gerenciador\gerenciador\obj\Debug\net6.0-windows\gerenciador.genruntimeconfig.cache
 C:\Users\Sirbu\OneDrive\Documentos\projects\gerenciador\gerenciador\obj\Debug\net6.0-windows\ref\gerenciador.dll
+C:\Users\Sirbu\OneDrive\Documentos\projects\gerenciador\gerenciador\obj\Debug\net6.0-windows\gerenciador.sourcelink.json

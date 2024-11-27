@@ -8,8 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "gerenciador/1.0.0": {
         "dependencies": {
-          "Microsoft.ReportingServices.ReportViewerControl.Winforms": "150.1484.0",
-          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.21.0",
+          "Microsoft.ReportingServices.ReportViewerControl.Winforms": "150.1404.0",
           "Npgsql": "9.0.1"
         },
         "runtime": {
@@ -36,30 +35,30 @@
           }
         }
       },
-      "Microsoft.ReportingServices.ReportViewerControl.Winforms/150.1484.0": {
+      "Microsoft.ReportingServices.ReportViewerControl.Winforms/150.1404.0": {
         "dependencies": {
           "Microsoft.SqlServer.Types": "14.0.314.76"
         },
         "runtime": {
           "lib/net40/Microsoft.ReportViewer.Common.dll": {
             "assemblyVersion": "15.0.0.0",
-            "fileVersion": "15.0.1484.0"
+            "fileVersion": "15.0.1404.0"
           },
           "lib/net40/Microsoft.ReportViewer.DataVisualization.dll": {
             "assemblyVersion": "15.0.0.0",
-            "fileVersion": "15.0.1484.0"
+            "fileVersion": "15.0.1404.0"
           },
           "lib/net40/Microsoft.ReportViewer.Design.dll": {
             "assemblyVersion": "15.0.0.0",
-            "fileVersion": "15.0.1484.0"
+            "fileVersion": "15.0.1404.0"
           },
           "lib/net40/Microsoft.ReportViewer.ProcessingObjectModel.dll": {
             "assemblyVersion": "15.0.0.0",
-            "fileVersion": "15.0.1484.0"
+            "fileVersion": "15.0.1404.0"
           },
           "lib/net40/Microsoft.ReportViewer.WinForms.dll": {
             "assemblyVersion": "15.0.0.0",
-            "fileVersion": "15.0.1484.0"
+            "fileVersion": "15.0.1404.0"
           }
         },
         "resources": {
@@ -193,7 +192,6 @@
           }
         }
       },
-      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.21.0": {},
       "Npgsql/9.0.1": {
         "dependencies": {
           "Microsoft.Extensions.Logging.Abstractions": "8.0.2",
@@ -273,12 +271,12 @@
       "path": "microsoft.extensions.logging.abstractions/8.0.2",
       "hashPath": "microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512"
     },
-    "Microsoft.ReportingServices.ReportViewerControl.Winforms/150.1484.0": {
+    "Microsoft.ReportingServices.ReportViewerControl.Winforms/150.1404.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-n+2dsSL2uTJRW09O8n5JaqiL1XCUzqyWgrbuYFHsESw6hxL7GIi0q2l3RQ8UsikeabgtvIhTyO1f28mwzk5BkQ==",
-      "path": "microsoft.reportingservices.reportviewercontrol.winforms/150.1484.0",
-      "hashPath": "microsoft.reportingservices.reportviewercontrol.winforms.150.1484.0.nupkg.sha512"
+      "sha512": "sha512-IOfEkS7QWdepp6P4ViGgmNy47CcdKqL8PHmF6+9d2UHdfzSI7SaRXDESQ5mgFrutorcZqTeg1yoxRinsSNHyvQ==",
+      "path": "microsoft.reportingservices.reportviewercontrol.winforms/150.1404.0",
+      "hashPath": "microsoft.reportingservices.reportviewercontrol.winforms.150.1404.0.nupkg.sha512"
     },
     "Microsoft.SqlServer.Types/14.0.314.76": {
       "type": "package",
@@ -286,13 +284,6 @@
       "sha512": "sha512-gAekCmSfjtRBaiuuRIqJJV6cfEsEbYY5vI7Ssoc5sYI04JcyPrZ4C8RC3z7K9xfpr9ejQAQ1AtfvtgqEnjmwOw==",
       "path": "microsoft.sqlserver.types/14.0.314.76",
       "hashPath": "microsoft.sqlserver.types.14.0.314.76.nupkg.sha512"
-    },
-    "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.21.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-8NudeHOE56YsY59HYY89akRMup8Ho+7Y3cADTGjajjWroXVU9RQai2nA6PfteB8AuzmRHZ5NZQB2BnWhQEul5g==",
-      "path": "microsoft.visualstudio.azure.containers.tools.targets/1.21.0",
-      "hashPath": "microsoft.visualstudio.azure.containers.tools.targets.1.21.0.nupkg.sha512"
     },
     "Npgsql/9.0.1": {
       "type": "package",
